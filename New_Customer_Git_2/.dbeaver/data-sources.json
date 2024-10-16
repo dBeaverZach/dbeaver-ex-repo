@@ -1,0 +1,38 @@
+{
+	"folders": {},
+	"connections": {
+		"mysql8-19296698708-2ba84274e958cb9d": {
+			"provider": "mysql-ee",
+			"driver": "mysql8",
+			"name": "customer_git_db",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "customer_git_db",
+				"url": "jdbc:mysql://localhost:3306/customer_git_db",
+				"configurationType": "MANUAL",
+				"home": "/opt/homebrew/Cellar/mysql/9.0.1_2",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
