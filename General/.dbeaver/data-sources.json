@@ -1,0 +1,80 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-192a0804640-1f2682d1a8d66df5": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgresdb",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "postgresdb",
+				"url": "jdbc:postgresql://localhost:5432/postgresdb",
+				"configurationType": "MANUAL",
+				"home": "/opt/homebrew/Cellar/postgresql@14/14.13_1",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native"
+			}
+		},
+		"mysql8-192a080c1bb-5f934af36b1f33fa": {
+			"provider": "mysql-ee",
+			"driver": "mysql8",
+			"name": "mydb",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "mydb",
+				"url": "jdbc:mysql://localhost:3306/mydb",
+				"configurationType": "MANUAL",
+				"home": "/opt/homebrew/Cellar/mysql/9.0.1_4",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "native"
+			}
+		},
+		"cql-192a0811cff-724e57bbf96af10f": {
+			"provider": "mongodb",
+			"driver": "cql",
+			"name": "local",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "27017",
+				"database": "local",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"replicaSet": "",
+					"casualConsistency": "false",
+					"authMechanism": "NONE",
+					"authSource": "admin"
+				},
+				"auth-model": "mongodb_default"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}
