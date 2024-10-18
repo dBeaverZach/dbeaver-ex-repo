@@ -17,7 +17,7 @@ SET default_with_oids = false;
 
 
 ---
---- drop tables
+--- drop tables pretty please!
 ---
 
 
