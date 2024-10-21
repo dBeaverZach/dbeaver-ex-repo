@@ -59,8 +59,50 @@
 				},
 				"auth-model": "mongodb_default"
 			}
+		},
+		"postgres-jdbc-192a178fc0c-7349aa799363951e": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "postgres",
+			"save-password": true,
+			"configuration": {
+				"host": "rdspostgres-1.cbei86qe4ck0.us-east-2.rds.amazonaws.com",
+				"port": "5432",
+				"database": "postgres",
+				"url": "jdbc:postgresql://rdspostgres-1.cbei86qe4ck0.us-east-2.rds.amazonaws.com:5432/postgres",
+				"configurationType": "MANUAL",
+				"home": "/opt/homebrew/Cellar/postgresql@14/14.13_1",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false",
+					"@dbeaver-chosen-role@": ""
+				},
+				"auth-model": "native"
+			}
+		},
+		"microsoft-192b15a2cdd-7ea33f3e124ce46d": {
+			"provider": "sqlserver-ee",
+			"driver": "microsoft",
+			"name": "master",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "1433",
+				"database": "master",
+				"url": "jdbc:sqlserver://;serverName\u003dlocalhost;databaseName\u003dmaster",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-all-schemas@": "false",
+					"sslTrustServerCertificate": "false"
+				},
+				"auth-model": "sqlserver_database"
+			}
 		}
 	},
+	"virtual-models": {"postgres-jdbc-192a0804640-1f2682d1a8d66df5":{"postgresdb":{"public":{":actor":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202410181346\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-192a0804640-1f2682d1a8d66df5\"\u003e\u003centity id\u003d\"1\" name\u003d\"actor\" fq-name\u003d\"public.actor\" order\u003d\"0\" color-bg\u003d\"128,64,32\" border-width\u003d\"3\" x\u003d\"400\" y\u003d\"140\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgresdb\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"film_actor\" fq-name\u003d\"public.film_actor\" order\u003d\"1\" x\u003d\"40\" y\u003d\"40\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgresdb\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"film_actor_actor_id_fkey\" fq-name\u003d\"public.film_actor.film_actor_actor_id_fkey\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"2\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}}},"postgres-jdbc-192a178fc0c-7349aa799363951e":{"postgres":{"public":{":orders":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202410181445\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-192a178fc0c-7349aa799363951e\"\u003e\u003centity id\u003d\"1\" name\u003d\"orders\" fq-name\u003d\"public.orders\" order\u003d\"0\" color-bg\u003d\"128,64,32\" x\u003d\"220\" y\u003d\"400\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"customers\" fq-name\u003d\"public.customers\" order\u003d\"1\" x\u003d\"440\" y\u003d\"40\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"employees\" fq-name\u003d\"public.employees\" order\u003d\"2\" x\u003d\"440\" y\u003d\"360\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"shippers\" fq-name\u003d\"public.shippers\" order\u003d\"3\" border-width\u003d\"3\" x\u003d\"680\" y\u003d\"540\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"order_details\" fq-name\u003d\"public.order_details\" order\u003d\"4\" x\u003d\"40\" y\u003d\"480\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"fk_order_details_orders\" fq-name\u003d\"public.order_details.fk_order_details_orders\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"5\"/\u003e\u003crelation name\u003d\"fk_orders_customers\" fq-name\u003d\"public.orders.fk_orders_customers\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"fk_orders_employees\" fq-name\u003d\"public.orders.fk_orders_employees\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"fk_employees_employees\" fq-name\u003d\"public.employees.fk_employees_employees\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"3\"\u003e\u003cbend type\u003d\"rel\" x\u003d\"623\" y\u003d\"593\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"660\" y\u003d\"575\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"660\" y\u003d\"539\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"623\" y\u003d\"520\"/\u003e\u003c/relation\u003e\u003crelation name\u003d\"fk_orders_shippers\" fq-name\u003d\"public.orders.fk_orders_shippers\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"1\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}},":employees":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202410181457\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-192a178fc0c-7349aa799363951e\"\u003e\u003centity id\u003d\"1\" name\u003d\"employees\" fq-name\u003d\"public.employees\" order\u003d\"0\" color-bg\u003d\"128,64,32\" x\u003d\"260\" y\u003d\"120\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"orders\" fq-name\u003d\"public.orders\" order\u003d\"1\" x\u003d\"40\" y\u003d\"40\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"employee_territories\" fq-name\u003d\"public.employee_territories\" order\u003d\"2\" x\u003d\"40\" y\u003d\"420\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"territories\" fq-name\u003d\"public.territories\" order\u003d\"3\" x\u003d\"717\" y\u003d\"306\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"fk_employees_employees\" fq-name\u003d\"public.employees.fk_employees_employees\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"1\"\u003e\u003cbend type\u003d\"rel\" x\u003d\"443\" y\u003d\"353\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"480\" y\u003d\"335\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"480\" y\u003d\"299\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"443\" y\u003d\"280\"/\u003e\u003c/relation\u003e\u003crelation name\u003d\"fk_orders_employees\" fq-name\u003d\"public.orders.fk_orders_employees\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"fk_employee_territories_employees\" fq-name\u003d\"public.employee_territories.fk_employee_territories_employees\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"3\"/\u003e\u003crelation name\u003d\"fk_employee_territories_territories\" fq-name\u003d\"public.employee_territories.fk_employee_territories_territories\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"3\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}}}},
 	"connection-types": {
 		"dev": {
 			"name": "Development",
