@@ -100,6 +100,99 @@
 				},
 				"auth-model": "sqlserver_database"
 			}
+		},
+		"redshift-jdbc-192b5d51042-7b8f93ea609e9462": {
+			"provider": "redshift",
+			"driver": "redshift-jdbc",
+			"origin": {
+				"$type": "cloud",
+				"$configuration": "aws",
+				"cloud-provider": "aws",
+				"cloud-id": "aws",
+				"cloud-zone-id": "us-east-1",
+				"aws-resource": "arn:aws:redshift-serverless:us-east-1:859245062624"
+			},
+			"name": "Redshift - us-east-1 (Serverless) (859245062624)",
+			"save-password": true,
+			"configuration": {
+				"host": "default.859245062624.us-east-1.redshift-serverless.amazonaws.com",
+				"port": "5439",
+				"database": "dev",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "redshift_iam"
+			}
+		},
+		"aws_athena_jdbc_simba-192b5d531c8-648d21f11a5f64a": {
+			"provider": "athena",
+			"driver": "aws_athena_jdbc_simba",
+			"origin": {
+				"$type": "cloud",
+				"$configuration": "aws",
+				"cloud-provider": "aws",
+				"cloud-id": "aws",
+				"cloud-zone-id": "us-east-1",
+				"aws-resource": "arn:aws:athena:us-east-1"
+			},
+			"name": "Athena - us-east-1 (859245062624)",
+			"save-password": true,
+			"configuration": {
+				"port": "444",
+				"server": "us-east-1",
+				"database": "s3://aws-athena-query-results-859245062624-us-east-1",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "iam_simple"
+			}
+		},
+		"dynamodb-192b5d552ea-24ff080690cf1ca0": {
+			"provider": "dynamodb",
+			"driver": "dynamodb",
+			"origin": {
+				"$type": "cloud",
+				"$configuration": "aws",
+				"cloud-provider": "aws",
+				"cloud-id": "aws",
+				"cloud-zone-id": "us-east-1",
+				"aws-resource": "dynamodb.us-east-1.amazonaws.com"
+			},
+			"name": "DynamoDB - us-east-1 (859245062624)",
+			"save-password": true,
+			"configuration": {
+				"host": "dynamodb.us-east-1.amazonaws.com",
+				"database": "dynamodb.us-east-1.amazonaws.com",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"regionName": "us-east-1"
+				},
+				"auth-model": "iam_simple"
+			}
+		},
+		"keyspaces-192b5d59fdd-1f7680d56593bfd4": {
+			"provider": "aws_keyspaces",
+			"driver": "keyspaces",
+			"origin": {
+				"$type": "cloud",
+				"$configuration": "aws",
+				"cloud-provider": "aws",
+				"cloud-id": "aws",
+				"cloud-zone-id": "us-east-1",
+				"aws-resource": "arn:aws:keyspaces:us-east-1"
+			},
+			"name": "Keyspaces - us-east-1",
+			"save-password": true,
+			"configuration": {
+				"host": "us-east-1",
+				"port": "9142",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"auth-model": "iam_keyspaces"
+			}
 		}
 	},
 	"virtual-models": {"postgres-jdbc-192a0804640-1f2682d1a8d66df5":{"postgresdb":{"public":{":actor":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202410181346\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-192a0804640-1f2682d1a8d66df5\"\u003e\u003centity id\u003d\"1\" name\u003d\"actor\" fq-name\u003d\"public.actor\" order\u003d\"0\" color-bg\u003d\"128,64,32\" border-width\u003d\"3\" x\u003d\"400\" y\u003d\"140\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgresdb\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"film_actor\" fq-name\u003d\"public.film_actor\" order\u003d\"1\" x\u003d\"40\" y\u003d\"40\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgresdb\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"film_actor_actor_id_fkey\" fq-name\u003d\"public.film_actor.film_actor_actor_id_fkey\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"2\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}}},"mysql8-192a080c1bb-5f934af36b1f33fa":{"Chinook":{":Artist":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202410211659\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mysql8-192a080c1bb-5f934af36b1f33fa\"\u003e\u003centity id\u003d\"1\" name\u003d\"Artist\" fq-name\u003d\"Chinook.Artist\" order\u003d\"0\" color-bg\u003d\"128,64,32\" x\u003d\"200\" y\u003d\"40\"\u003e\u003cpath name\u003d\"Chinook\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"Album\" fq-name\u003d\"Chinook.Album\" order\u003d\"1\" x\u003d\"40\" y\u003d\"40\"\u003e\u003cpath name\u003d\"Chinook\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"FK_AlbumArtistId\" fq-name\u003d\"Chinook.Album.FK_AlbumArtistId\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"2\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}},":Customer":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202410211659\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"mysql8-192a080c1bb-5f934af36b1f33fa\"\u003e\u003centity id\u003d\"1\" name\u003d\"Customer\" fq-name\u003d\"Chinook.Customer\" order\u003d\"0\" color-bg\u003d\"128,64,32\" x\u003d\"260\" y\u003d\"60\"\u003e\u003cpath name\u003d\"Chinook\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"Employee\" fq-name\u003d\"Chinook.Employee\" order\u003d\"1\" x\u003d\"460\" y\u003d\"40\"\u003e\u003cpath name\u003d\"Chinook\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"Invoice\" fq-name\u003d\"Chinook.Invoice\" order\u003d\"2\" x\u003d\"40\" y\u003d\"100\"\u003e\u003cpath name\u003d\"Chinook\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"InvoiceLine\" fq-name\u003d\"Chinook.InvoiceLine\" order\u003d\"3\" x\u003d\"267\" y\u003d\"418\"\u003e\u003cpath name\u003d\"Chinook\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"FK_InvoiceCustomerId\" fq-name\u003d\"Chinook.Invoice.FK_InvoiceCustomerId\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"3\"/\u003e\u003crelation name\u003d\"FK_CustomerSupportRepId\" fq-name\u003d\"Chinook.Customer.FK_CustomerSupportRepId\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"FK_EmployeeReportsTo\" fq-name\u003d\"Chinook.Employee.FK_EmployeeReportsTo\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"2\"\u003e\u003cbend type\u003d\"rel\" x\u003d\"610\" y\u003d\"237\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"641\" y\u003d\"222\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"641\" y\u003d\"192\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"610\" y\u003d\"177\"/\u003e\u003c/relation\u003e\u003crelation name\u003d\"FK_InvoiceLineInvoiceId\" fq-name\u003d\"Chinook.InvoiceLine.FK_InvoiceLineInvoiceId\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"4\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}},"postgres-jdbc-192a178fc0c-7349aa799363951e":{"postgres":{"public":{":orders":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202410181445\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-192a178fc0c-7349aa799363951e\"\u003e\u003centity id\u003d\"1\" name\u003d\"orders\" fq-name\u003d\"public.orders\" order\u003d\"0\" color-bg\u003d\"128,64,32\" x\u003d\"220\" y\u003d\"400\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"customers\" fq-name\u003d\"public.customers\" order\u003d\"1\" x\u003d\"440\" y\u003d\"40\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"employees\" fq-name\u003d\"public.employees\" order\u003d\"2\" x\u003d\"440\" y\u003d\"360\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"shippers\" fq-name\u003d\"public.shippers\" order\u003d\"3\" border-width\u003d\"3\" x\u003d\"680\" y\u003d\"540\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"order_details\" fq-name\u003d\"public.order_details\" order\u003d\"4\" x\u003d\"40\" y\u003d\"480\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"fk_order_details_orders\" fq-name\u003d\"public.order_details.fk_order_details_orders\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"5\"/\u003e\u003crelation name\u003d\"fk_orders_customers\" fq-name\u003d\"public.orders.fk_orders_customers\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"fk_orders_employees\" fq-name\u003d\"public.orders.fk_orders_employees\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"1\"/\u003e\u003crelation name\u003d\"fk_employees_employees\" fq-name\u003d\"public.employees.fk_employees_employees\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"3\"\u003e\u003cbend type\u003d\"rel\" x\u003d\"623\" y\u003d\"593\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"660\" y\u003d\"575\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"660\" y\u003d\"539\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"623\" y\u003d\"520\"/\u003e\u003c/relation\u003e\u003crelation name\u003d\"fk_orders_shippers\" fq-name\u003d\"public.orders.fk_orders_shippers\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"1\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}},":employees":{"properties":{"erd.diagram.state":{"serialized":"\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202410181457\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"postgres-jdbc-192a178fc0c-7349aa799363951e\"\u003e\u003centity id\u003d\"1\" name\u003d\"employees\" fq-name\u003d\"public.employees\" order\u003d\"0\" color-bg\u003d\"128,64,32\" x\u003d\"260\" y\u003d\"120\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"orders\" fq-name\u003d\"public.orders\" order\u003d\"1\" x\u003d\"40\" y\u003d\"40\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"employee_territories\" fq-name\u003d\"public.employee_territories\" order\u003d\"2\" x\u003d\"40\" y\u003d\"420\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"territories\" fq-name\u003d\"public.territories\" order\u003d\"3\" x\u003d\"717\" y\u003d\"306\"\u003e\u003cpath name\u003d\"public\"/\u003e\u003cpath name\u003d\"postgres\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"fk_employees_employees\" fq-name\u003d\"public.employees.fk_employees_employees\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"1\"\u003e\u003cbend type\u003d\"rel\" x\u003d\"443\" y\u003d\"353\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"480\" y\u003d\"335\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"480\" y\u003d\"299\"/\u003e\u003cbend type\u003d\"rel\" x\u003d\"443\" y\u003d\"280\"/\u003e\u003c/relation\u003e\u003crelation name\u003d\"fk_orders_employees\" fq-name\u003d\"public.orders.fk_orders_employees\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"fk_employee_territories_employees\" fq-name\u003d\"public.employee_territories.fk_employee_territories_employees\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"3\"/\u003e\u003crelation name\u003d\"fk_employee_territories_territories\" fq-name\u003d\"public.employee_territories.fk_employee_territories_territories\" type\u003d\"fk\" pk-ref\u003d\"4\" fk-ref\u003d\"3\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"}}}}}}},
@@ -117,6 +210,34 @@
 			"close-transactions-period": 1800,
 			"auto-close-connections": true,
 			"close-connections-period": 14400
+		}
+	},
+	"external-configurations": {
+		"aws": {
+			"defaultRegions": [
+				"us-east-1"
+			],
+			"enabledServices": [
+				"rds",
+				"redshift",
+				"athena",
+				"dynamodb",
+				"documentdb",
+				"keyspaces"
+			],
+			"govRegionsEnabled": false,
+			"isoRegionsEnabled": false,
+			"s3Disabled": false,
+			"autoRegistrationEnabled": false,
+			"federatedAccessEnabled": false,
+			"credentials": {
+				"defaultAwsCredentials": false,
+				"sessionCredentials": false,
+				"ssoOverCli": false,
+				"crossAccountAccess": false
+			},
+			"cloudId": "aws",
+			"cloudName": "AWS configuration"
 		}
 	}
 }
